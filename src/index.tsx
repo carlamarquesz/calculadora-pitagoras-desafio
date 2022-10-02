@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'; 
-import App from './App'; 
-navigator.serviceWorker.onmessage = (_event) => {
-  console.log('notificacao chegou');
-  document.dispatchEvent(new CustomEvent('Notificacao', { detail: 'chegou' }));
-}; 
+import App from './App';  
 ReactDOM.render(
   <React.StrictMode>
     <App />

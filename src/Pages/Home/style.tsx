@@ -5,10 +5,11 @@ export const Container = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  margin: 10rem auto; 
+  margin: 5rem auto; 
   max-width: 700px; 
   background: #F9F9F9;
   box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.14);
+  @media (max-width: 500px) { box-shadow: none; margin: 2rem auto; }
   border-radius: 30px;
   padding: 65px 0px;
 `;
@@ -33,24 +34,29 @@ export const Form = styled.div`
   flex-wrap: wrap;    
   
 `; 
-export const Teclado = styled.div` 
-  display: flex; 
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;  
-  flex-wrap: wrap;   
-  max-width: 600px;
-`; 
-// export const Triangulo = styled.div`
-//   max-width:20rem;
-//   padding: 20px;
-// `; 
 export const AcharHipotenusa = styled.div`
   display: flex;  
   flex-direction: column;   
   margin: 2rem;  
   align-content: center;
 `; 
+export const Hipotenusa = styled.h2` 
+  position: absolute;
+  margin-top: 7rem;
+  margin-left: 8.5rem;
+  
+`; 
+export const CatetoB = styled(Hipotenusa)` 
+  margin-top: 8rem; 
+  margin-left: 0rem;
+  
+`; 
+export const CatetoC = styled(Hipotenusa)` 
+  margin-top: 16rem;
+  margin-left: 7rem;
+  
+`;  
+
 export const Input = styled.input`
   border: 2px #DBDBDB solid;
   background: white;
@@ -69,84 +75,51 @@ export const Input = styled.input`
     border-color: #24A952;
   }
 `;  
+
+export const Teclado = styled.div` 
+  display: flex; 
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;  
+  flex-wrap: wrap;   
+  max-width: 600px;
+`; 
+
 export const ButtonTeclado = styled.button`  
-  width: 83px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  max-width: 100%;
+  width:13rem;
   height: 81px;  
   background: #FFFFFF;
   border: 1px solid #DBDBDB;
   box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.05);
   border-radius: 10px;  
   color: black;
-  font-size: 1.6rem; 
+  font-size: 1.4rem; 
   font-weight: 700;
-  margin:  15px;
+  margin:  10px;
   cursor: pointer;
- 
-`;
-export const ButtonTecladoCalcular = styled.button`  
-  width: 310px;
-  height: 81px;  
-  background: #24A952;
-  border: 1px solid #DBDBDB;
-  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;  
-  color: white;
-  font-size: 1.6rem; 
-  font-weight: 700;
-  margin:  15px;
-  cursor: pointer;
- 
-`; 
-export const ButtonTecladoAC = styled.button`  
-  width: 83px;
-  height: 81px;  
-  background: #24A952;
-  border: 1px solid #DBDBDB;
-  box-shadow: -4px 4px 4px rgba(0, 0, 0, 0.05);
-  border-radius: 10px;  
-  color: white;
-  font-size: 1.6rem; 
-  font-weight: 700;
-  margin:  15px;
-  cursor: pointer;
- 
-`;
+  :hover{
+    transition: 0.2s;
+    background: #f0f0f0; 
+  }
+  p{
+    margin-left: 8px; 
 
-export const Hipotenusa = styled.h2` 
-  position: absolute;
-  margin-top: 7rem;
-  margin-left: 8rem;
-  
-`; 
-export const CatetoB = styled.h2` 
-  position: absolute;
-  margin-top: 7.5rem; 
-  
-`; 
-export const CatetoC = styled.h2` 
-  position: absolute;
-  margin-top: 15.5rem;
-  margin-left: 6rem;
-  
-`; 
-export const ButtonMetaMask = styled(ButtonTeclado)``;
-export const ButtonInsideMetaMask = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #291d32;
-  min-height: 2.5rem;
-  min-width: 20.8rem;
-  border-radius: 4px;
-  border: none;
-  h1 {
-    margin: 0;
-    font-size: 1.1rem;
-    background: -webkit-linear-gradient(135deg, #9a4dff 0%, #f600dd 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
-  img{
-    margin-left: 0.5rem;
-  }
+ 
 `;
+export const ButtonTecladoCalcular = styled(ButtonTeclado)`  
+  background: #24A952; 
+  color: white; 
+  :hover{
+    transition: 0.2s;
+    background: #0b9c3d; 
+  } 
+`; 
+
+
+
+ 
